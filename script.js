@@ -1,7 +1,8 @@
 "use strict";
-console.log(
-  (document.querySelector(".message").textContent = "correct Number")
-);
-document.querySelector(".number").textContent = 13;
-
-document.querySelector(".guess");
+document.querySelector(".check").addEventListener("click", function () {
+  const guess = Number(document.querySelector(".guess").value);
+  console.log(guess);
+  if (!guess) {
+    document.querySelector(".message").textContent = "⛔ NO Number!";
+  }
+});
