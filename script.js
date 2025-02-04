@@ -9,6 +9,7 @@ document.querySelector(".check").addEventListener("click", function () {
     document.querySelector(".message").textContent = "⛔ no number! ";
   } else if (guess == secretNumber) {
     document.querySelector(".message").textContent = "🎇 correct number! ";
+    document.querySelector("body").style.background = "green";
   } else if (guess > secretNumber) {
     if (score > 1) {
       document.querySelector(".message").textContent = "📈 too high ";
@@ -17,6 +18,7 @@ document.querySelector(".check").addEventListener("click", function () {
     } else {
       document.querySelector(".message").textContent = "😕 you lost the game";
       document.querySelector(".score").textContent = 0;
+      document.querySelector("body").style.background = "red";
     }
   } else if (guess < secretNumber) {
     if (score > 1) {
@@ -26,6 +28,7 @@ document.querySelector(".check").addEventListener("click", function () {
     } else {
       document.querySelector(".message").textContent = "😕 you lost the game";
       document.querySelector(".score").textContent = 0;
+      document.querySelector("body").style.background = "red";
     }
   }
 });
